@@ -22,7 +22,8 @@ class Consumable(Base):
         return "<consumable(name='%s')>" % self.name
 
 
-engine = create_engine('sqlite:///:memory:', echo=True)
+# engine = create_engine('sqlite:///:memory:', echo=True)
+engine = create_engine('postgresql://vagrant:_____@localhost:5432/vagrant', echo=True)
 Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
