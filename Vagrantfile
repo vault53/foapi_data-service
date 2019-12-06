@@ -88,6 +88,5 @@ Vagrant.configure("2") do |config|
     cd /vagrant
     pipenv install
     pipenv shell
-
   SHELL
 end
